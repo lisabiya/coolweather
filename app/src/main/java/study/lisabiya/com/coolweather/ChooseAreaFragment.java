@@ -52,7 +52,6 @@ public class ChooseAreaFragment extends Fragment {
 
     private List<String> dataList=new ArrayList<>();
 
-    private Boolean IS_CHANGE=false;
 
     //省列表
     private List<Province> provinceList;
@@ -104,7 +103,6 @@ public class ChooseAreaFragment extends Fragment {
                     if (getActivity() instanceof MainActivity){
                         Intent intent=new Intent(getActivity(),WeatherActivity.class);
                         intent.putExtra("weather_id",weatherId);
-                        intent.putExtra("is_change",IS_CHANGE);
                         startActivity(intent);
                         getActivity().finish();
                     }else if (getActivity() instanceof WeatherActivity){
